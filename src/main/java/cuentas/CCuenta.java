@@ -1,5 +1,11 @@
 package cuentas;
-
+/**
+ * Esta clase simula el comportamiento de un cajero.
+ * Ingresa o quita dinero y devuelve la cantidad en la cuenta.
+ * 
+ * @author Usuario
+ * @version 1.2
+ */
 public class CCuenta {
 
 
@@ -18,19 +24,30 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
-
+/**
+ * Indica el dinero actual de la cuenta.
+ * @return getSaldo()
+ */
     public double estado()
     {
         return getSaldo();
     }
-
+/**
+ * Ingresa dinero y devuelve la cantidad total en cuenta.
+ * @param cantidad
+ * @throws Exception 
+ */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
-
+/**
+ * Retira dinero y devuelve la cantidad total en cuenta.
+ * @param cantidad
+ * @throws Exception 
+ */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
